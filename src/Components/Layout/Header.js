@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import foodImg from "../../Images/headerImg.jpeg"
+import foodImg from "../../Images/headerImg.jpeg";
+import CartButton from "../SubComponents/CartButton";
 import "./Header.css";
 
 function Header() {
@@ -7,7 +8,7 @@ function Header() {
         <Fragment>
             <header className="header">
                 <h1>FoodPanda</h1>
-                <button>Cart</button>
+                <CartButton />
 
             </header>
 
