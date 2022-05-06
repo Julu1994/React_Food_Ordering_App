@@ -9,15 +9,13 @@ function Header() {
             <header className="header">
                 <h1>FoodPanda</h1>
                 <CartButton />
-
             </header>
 
             <div className="HeaderImage">
-                <img src={foodImg} alt="Cover"/>
-
+                <img src={foodImg} alt="Cover" />
             </div>
         </Fragment>
-    )
+    );
 }
 
 export default Header;

@@ -3,12 +3,12 @@ import "./CartButton.css";
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 function CartButton() {
     return (
-        <button>
-            <span>
+        <button className="button">
+            <span className="buttonIcon">
                 <AiOutlineShoppingCart />
             </span>
-            <span></span>
-            <span></span>
+            <span>Cart</span>
+            <span className="buttonBadge">2</span>
         </button>
     );
 }
