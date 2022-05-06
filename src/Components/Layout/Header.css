@@ -27,3 +27,53 @@
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
+
+.logo {
+}
+
+.logo-title {
+    color: rgb(240, 255, 241);
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    animation-name: logoAnimation;
+    animation-duration: 3s;
+}
+
+.motto {
+    display: block;
+    font-size: 1rem;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    animation-name: mottoAnimation;
+    animation-duration: 3s;
+}
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes mottoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -7,7 +7,10 @@ function Header() {
     return (
         <Fragment>
             <header className="header">
-                <h1>FoodPanda</h1>
+                <h1 className="logo">
+                    <span className="logo-title">FOODMART</span>
+                    <span className="motto">STAY AT HOME</span>
+                </h1>
                 <CartButton />
             </header>
 
