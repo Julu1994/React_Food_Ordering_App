@@ -1,16 +1,35 @@
-import React from "react";
-import { useState } from "react";
-import Card from "../SubComponents/Card";
+import React, { useState, useEffect } from "react";
 
 function Drinks() {
-    const [products, setProducts] = useState([]);
-    async () => {
-        return fetch("https://fakestoreapi.com/products").then((res) =>
-            res.json()
+    const [users, setUsers] = useState();
+    const getApiData = async () => {
+        const response = await fetch("https://fakestoreapi.com/products/").then(
+            (response) => response.json()
         );
-    };
 
-    return <div>{products[0].title}</div>;
+        // update the state
+        setUsers(response);
+    };
+    useEffect(() => {
+        getApiData();
+    }, []);
+
+    return (
+        <div className="app">
+            {users?.map((user) => (
+                <div className="item-container">
+                    Id:{user.id} <div className="title">Title:{user.title}</div>
+                </div>
+            ))}
+            {/* {users &&
+                users.map((user) => (
+                    <div className="item-container">
+                        Id:{user.id}{" "}
+                        <div className="title">Title:{user.title}</div>
+                    </div>
+                ))} */}
+        </div>
+    );
 }
 
 export default Drinks;
