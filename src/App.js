@@ -1,14 +1,14 @@
-import React from 'react';
-import { Fragment } from 'react';
-import Header from './Components/Layout/Header';
-import './App.css';
+import React from "react";
+import { Fragment } from "react";
+import Home from "./Components/Layout/Home";
+import "./App.css";
 
 function App() {
-  return (
-    <Fragment>
-      <Header />
-    </Fragment>
-  );
+    return (
+        <Fragment>
+            <Home />
+        </Fragment>
+    );
 }
 
 export default App;

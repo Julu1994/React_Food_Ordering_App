@@ -3,20 +3,13 @@ import { useState } from "react";
 import Card from "../SubComponents/Card";
 
 function Drinks() {
-    const [drink, setDrink] = useState([]);
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            setDrink(data.drinks);
-        });
+    const [products, setProducts] = useState([]);
+    fetch("https://fakestoreapi.com/products/1")
+        .then((res) => res.json())
+        .then((data) => setProducts(data));
+    console.log(products);
 
-    return (
-        <div>
-            <Card drinksInfo={drink} />
-        </div>
-    );
+    return <div>{products[0].title}</div>;
 }
 
 export default Drinks;

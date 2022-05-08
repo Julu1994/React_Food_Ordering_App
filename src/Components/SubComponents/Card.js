@@ -6,13 +6,9 @@ function Card({ drinksInfo }) {
         <div className="main-div">
             {drinksInfo.map((drinks) => (
                 <div className="card">
-                    <img
-                        className="card-img"
-                        src={drinks.strDrinkThumb}
-                        alt=""
-                    />
-                    <h1 className="card-tittle">{drinks.strDrink}</h1>
-                    <p className="card-description">{drinks.strInstructions}</p>
+                    <img className="card-img" src={drinks.image} alt="" />
+                    <h1 className="card-tittle">{drinks.title}</h1>
+                    <p className="card-description">{drinks.price}</p>
                     <button className="card-button">Buy</button>
                 </div>
             ))}
