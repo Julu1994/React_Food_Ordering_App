@@ -4,10 +4,11 @@ import Card from "../SubComponents/Card";
 
 function Drinks() {
     const [products, setProducts] = useState([]);
-    fetch("https://fakestoreapi.com/products/1")
-        .then((res) => res.json())
-        .then((data) => setProducts(data));
-    console.log(products);
+    async () => {
+        return fetch("https://fakestoreapi.com/products").then((res) =>
+            res.json()
+        );
+    };
 
     return <div>{products[0].title}</div>;
 }
