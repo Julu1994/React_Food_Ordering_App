@@ -2,13 +2,27 @@ import React, { useState, useEffect } from "react";
 import Card from "../SubComponents/Card";
 
 function Drinks() {
-    const [drinksItem, setDrinksItem] = useState();
+    const [drinksItem, setDrinksItem] = useState([]);
+    function data() {
+        fetch("https://fakestoreapi.com/products/")
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                const transformedData = data.map((newData) => {
+                    return newData.title;
+                });
+                setDrinksItem(transformedData);
+                console.log(drinksItem);
+            });
+    }
 
-    fetch("https://fakestoreapi.com/products/1").then((response) =>
-        console.log(response)
+    return (
+        <div>
+            <button onClick={data}>Click </button>
+            <h1>{drinksItem.title}</h1>
+        </div>
     );
-
-    return <div className="app"></div>;
 }
 
 export default Drinks;
