@@ -18,7 +18,6 @@ function Header() {
             <div className="HeaderImage">
                 <img src={foodImg} alt="Cover" />
             </div>
-            <Drinks />
         </Fragment>
     );
 }
