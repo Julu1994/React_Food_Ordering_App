@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import foodImg from "../../Images/drinks3.jpeg";
 import CartButton from "../SubComponents/CartButton";
 import "./Header.css";
+import Drinks from "./Drinks";
 
 function Header() {
     return (
@@ -17,6 +18,7 @@ function Header() {
             <div className="HeaderImage">
                 <img src={foodImg} alt="Cover" />
             </div>
+            <Drinks />
         </Fragment>
     );
 }
