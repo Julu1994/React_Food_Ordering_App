@@ -1,0 +1,26 @@
+$color1: rgba(28, 145, 241, 0.459);
+
+*{
+    margin: 0;
+}
+.navbar{
+    background-color: $color1;
+    height: 5rem;
+}
+
+.nav{
+
+    &-main{
+        font-size: 2rem;
+        background: none;
+
+    }
+
+
+    &-list {
+        background-color: $color1;
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+    } 
+}

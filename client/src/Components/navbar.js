@@ -3,6 +3,7 @@ import { FaHamburger, FaHome } from "react-icons/fa";
 import { MdFoodBank, MdOutlineAdminPanelSettings } from "react-icons/md";
 import { GrContact } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import "./navbar.scss";
 
 function Navbar() {
     const [sidenav, setSidenav] = useState(false);
