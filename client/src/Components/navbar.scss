@@ -1,11 +1,21 @@
-$color1: rgba(28, 145, 241, 0.459);
+$color1: rgba(9, 177, 255, 0.623);
+$color2 : rgb(253, 253, 253);
 
 *{
     margin: 0;
+    padding:0;
 }
 .navbar{
     background-color: $color1;
     height: 5rem;
+    position: relative;
+    &-icon{
+        color:$color2;
+        font-size: 2rem;
+        position: absolute;
+        left: 2rem;
+        top: 1rem; 
+    }
 }
 
 .nav{
@@ -13,14 +23,39 @@ $color1: rgba(28, 145, 241, 0.459);
     &-main{
         font-size: 2rem;
         background: none;
+        background-color: $color1;
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        transition: 1s;
 
     }
 
 
     &-list {
-        background-color: $color1;
-        width: 30%;
-        height: 100vh;
-        position: fixed;
+        margin-left: 2rem;
     } 
+    &-item{
+        list-style: none;
+    }
+
+    &-link{
+        margin-bottom: 5rem;
+        text-decoration: none;
+        color: $color2;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &-icon{
+        margin-right: 1rem;
+
+    }
+
+}
+
+.active{
+    left: 0;
 }
