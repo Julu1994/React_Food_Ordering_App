@@ -1,0 +1,14 @@
+
+
+
+$color1: rgba(98, 202, 250, 0.988);
+$color2 : rgb(255, 255, 255);
+
+@mixin btn-effect {
+        &:hover{
+            transform: scale(1.2)
+        } 
+        &:active {
+            transform: scale(1);
+        }
+    } 

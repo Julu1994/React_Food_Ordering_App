@@ -2,6 +2,20 @@
     background-image: url(../Components/Resources/foodordering2.png);
     width: 100%;
     height: 45rem;
-    clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
     z-index: 100;
+    position: relative;
+}
+
+.header::after{
+    content: "";
+    display: inline-block;
+    height: 8rem;
+    width: 99.5%;
+    background-color: rgba(31, 204, 161, 0.413);
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transition: all 0.8s;
+    border: solid 6px rgb(1, 151, 101);
+    z-index: 2000;
 }

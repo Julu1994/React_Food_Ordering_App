@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Oleo+Script&family=Pacifico&display=swap');
+@import "./variables-mixins.scss";
 
 
-$color1: rgba(98, 202, 250, 0.988);
-$color2 : rgb(255, 255, 255);
 
 *{
     margin: 0;
@@ -17,7 +16,9 @@ $color2 : rgb(255, 255, 255);
         font-size: 2rem;
         position: absolute;
         left: 2rem;
-        top: 1rem; 
+        top: 1rem;
+        transition: .6s;
+        @include btn-effect;
     }
 }
 
@@ -70,6 +71,7 @@ $color2 : rgb(255, 255, 255);
         color: $color2;
         transform: translateX(-.7rem);
         cursor: pointer;
+        @include btn-effect;
     }
     &-item{
         list-style: none;
