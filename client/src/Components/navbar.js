@@ -23,13 +23,25 @@ function Navbar() {
 
                 </div>
                 <Link to="/" className="navbar-icon">
-                    {sidenav? (<TiDelete onClick={() => setSidenav(!sidenav) } /> ) : (<FaHamburger onClick={() => setSidenav(!sidenav)}/>)}
+                    <FaHamburger onClick={() => {
+                        setSidenav(!sidenav);
+                        document.body.style.overflow = 'hidden';
+
+                    }}/>
+                    
                     
                 </Link>
             </div>
 
             <nav className={sidenav ? "nav-main active" : "nav-main"}>
                 <ul className="nav-list">
+                    <li className="nav-item">
+                        <TiDelete className="nav-hide" onClick={() => {
+                            setSidenav(!sidenav);
+                            document.body.style.overflow = 'unset';
+                        }}/>
+
+                    </li>
                     
                     <li className="nav-item">
                         <Link to="/" className="nav-link">

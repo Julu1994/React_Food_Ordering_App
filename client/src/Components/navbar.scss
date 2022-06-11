@@ -45,13 +45,14 @@ $color2 : rgb(255, 255, 255);
 .nav{
 
     &-main{
+        top: 0;
+        left: -100%;
         font-size: 2rem;
         background: none;
         background-color: $color1;
         width: 30%;
         height: 100vh;
         position: fixed;
-        left: -100%;
         transition: 1s;
         z-index: 200;
         overflow: hidden;
@@ -61,7 +62,15 @@ $color2 : rgb(255, 255, 255);
 
     &-list {
         margin-left: 2rem;
-    } 
+    }
+    &-hide{
+        list-style: none;
+        font-size: 3rem;
+        margin: 2rem 0 2rem 0;
+        color: $color2;
+        transform: translateX(-.7rem);
+        cursor: pointer;
+    }
     &-item{
         list-style: none;
     }
@@ -84,6 +93,7 @@ $color2 : rgb(255, 255, 255);
 
 .active{
     left: 0;
+    overflow: hidden;
 }
 
 @keyframes logoAnimation {
