@@ -12,6 +12,15 @@ function Navbar() {
     return (
         <div>
             <div className="navbar">
+                <div className="logo">
+                    <h1 className="logo-main">
+                        Wolf
+                    </h1>
+                    <p className="logo-motto">
+                        STAY AT HOME
+                    </p>
+
+                </div>
                 <Link to="/" className="navbar-icon">
                     {sidenav? (<TiDelete onClick={() => setSidenav(!sidenav)} /> ) : (<FaHamburger onClick={() => setSidenav(!sidenav)}/>)}
                     
