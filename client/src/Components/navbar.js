@@ -9,6 +9,7 @@ import "./navbar.scss";
 function Navbar() {
     const [sidenav, setSidenav] = useState(false);
 
+
     return (
         <div>
             <div className="navbar">
@@ -22,7 +23,7 @@ function Navbar() {
 
                 </div>
                 <Link to="/" className="navbar-icon">
-                    {sidenav? (<TiDelete onClick={() => setSidenav(!sidenav)} /> ) : (<FaHamburger onClick={() => setSidenav(!sidenav)}/>)}
+                    {sidenav? (<TiDelete onClick={() => setSidenav(!sidenav) } /> ) : (<FaHamburger onClick={() => setSidenav(!sidenav)}/>)}
                     
                 </Link>
             </div>
