@@ -3,6 +3,7 @@
 
 $color1: rgba(98, 202, 250, 0.988);
 $color2 : rgb(255, 255, 255);
+$color3 : rgba(17, 24, 26, 0.838);
 
 @mixin btn-effect {
         &:hover{
@@ -12,3 +13,13 @@ $color2 : rgb(255, 255, 255);
             transform: scale(1);
         }
     } 
+@mixin clickable-component ($bg, $cl){
+        margin:0 0 5rem 1rem;
+        text-decoration: none;
+        color: $cl;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        background-color: $bg;
+
+}

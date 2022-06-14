@@ -20,7 +20,14 @@
         transition: .6s;
         @include btn-effect;
     }
+    &-cart {
+        position: absolute;
+        top: 1rem;
+        left: 85%;
+    }
+
 }
+
 
 .logo{
     color: $color2;
@@ -79,12 +86,7 @@
     }
 
     &-link{
-        margin:0 0 5rem 1rem;
-        text-decoration: none;
-        color: $color2;
-        font-size: 1.3rem;
-        display: flex;
-        align-items: center;
+        @include clickable-component(none, $color2);
         
     }
 

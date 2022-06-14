@@ -1,0 +1,29 @@
+@import "../variables-mixins.scss";
+@import "../animation.scss";
+.button {
+    @include clickable-component($color2, $color3);
+    background-color: $color2;
+    padding: 0.75rem 3rem;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    
+    &-icon{
+        font-size: 1.3rem;
+
+    }
+    &-text{
+        margin-left: .3rem;
+    }
+    &-badge{
+        margin-left: .3rem;
+    }
+}
+
+.button:hover,
+.button:active {
+    @include pop-up;
+}
+
+
+

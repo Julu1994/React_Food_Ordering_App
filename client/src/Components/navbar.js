@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { FaHamburger, FaHome } from "react-icons/fa";
 import { MdFoodBank, MdOutlineAdminPanelSettings, MdOutlineSupportAgent } from "react-icons/md";
 import { TiDelete } from "react-icons/ti";
-
+import CartButton from './SubComponents/cartButton';
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 
@@ -35,8 +35,8 @@ function Navbar() {
                     
                     
                 </Link>
-                <div className="cart">
-
+                <div className="navbar-cart">
+                    <CartButton />
                 </div>
             </div>
 
