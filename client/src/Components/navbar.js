@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
 import { FaHamburger, FaHome } from "react-icons/fa";
 import { MdFoodBank, MdOutlineAdminPanelSettings, MdOutlineSupportAgent } from "react-icons/md";
-import { TiDelete} from "react-icons/ti";
+import { TiDelete } from "react-icons/ti";
 
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 function Navbar() {
     const [sidenav, setSidenav] = useState(false);
+    const navHide = () => {
+                            setSidenav(!sidenav);
+                            document.body.style.overflow = 'unset';
+                        }
 
 
     return (
@@ -22,7 +26,7 @@ function Navbar() {
                     </p>
 
                 </div>
-                <Link to="/" className="navbar-icon">
+                <Link to="#" className="navbar-icon">
                     <FaHamburger onClick={() => {
                         setSidenav(!sidenav);
                         document.body.style.overflow = 'hidden';
@@ -31,20 +35,20 @@ function Navbar() {
                     
                     
                 </Link>
+                <div className="cart">
+
+                </div>
             </div>
 
             <nav className={sidenav ? "nav-main active" : "nav-main"}>
                 <ul className="nav-list">
                     <li className="nav-item">
-                        <TiDelete className="nav-hide" onClick={() => {
-                            setSidenav(!sidenav);
-                            document.body.style.overflow = 'unset';
-                        }}/>
+                        <TiDelete  className="nav-hide" onClick={navHide}/>
 
                     </li>
                     
                     <li className="nav-item">
-                        <Link to="/" className="nav-link">
+                        <Link to="/" onClick={navHide} className="nav-link">
                             <span className="nav-icon"> <FaHome /></span>
                             <span className="nav-text"> Home</span>
                             
@@ -52,21 +56,21 @@ function Navbar() {
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/" className="nav-link">
+                        <Link to="/" onClick={navHide} className="nav-link">
                             <span className="nav-icon"> <MdFoodBank /></span>
                             <span className="nav-text"> Menu</span>
                         </Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/contact" className="nav-link">
+                        <Link to="/contact" onClick={navHide} className="nav-link">
                             <span className="nav-icon"> <MdOutlineSupportAgent /> </span>
                             <span className="nav-text">Contact</span>
                         </Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/" className="nav-link">
+                        <Link to="/" onClick={navHide} className="nav-link">
                             <span className="nav-icon"><MdOutlineAdminPanelSettings /></span>
                             <span className="nav-text">Admin</span>
                         </Link>
