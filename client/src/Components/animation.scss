@@ -1,4 +1,4 @@
-@mixin btn-anim ($borderRadious) {
+@mixin btn-anim ($borderRadious, $bg) {
         content: "";
         display: inline-block;
         height: 100%;
@@ -9,10 +9,11 @@
         left: 0;
         z-index: -1;
         transition: all 0.6s;
-        background-color: $color2;
+        background-color: $bg;
 }
 
-@mixin btn-anim-hover {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
+@mixin btn-anim-hover($bg) {
+    background-color: $bg;
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }

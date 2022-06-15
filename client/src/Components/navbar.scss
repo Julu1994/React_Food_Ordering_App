@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Oleo+Script&family=Pacifico&display=swap');
 @import "./variables-mixins.scss";
+@import "./animation.scss";
 
 
 
@@ -85,11 +86,25 @@
         list-style: none;
     }
 
+
     &-link{
-        width: 20%;
+        position: relative;
+        width: 6.5rem;
         @include clickable-component(none, $color2);
-        
     }
+    &-link:hover{
+        transition: 1.2s;
+        transform: scale(1.2);
+
+    }
+    &-link::after {
+        @include btn-anim(5px, none);
+
+    }
+    &-link:hover::after{
+        @include btn-anim-hover($color2);
+    }
+
 
     &-icon{
         margin-right: 1rem;

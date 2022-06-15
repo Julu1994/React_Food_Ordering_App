@@ -25,12 +25,12 @@
 }
 
 .button::after{
-    @include btn-anim(25px);
+    @include btn-anim(25px, $color2);
 
 }
 
-.button:hover::after{
-    @include btn-anim-hover;
+.button:hover::after {
+    @include btn-anim-hover($color2);
 
 }
 
