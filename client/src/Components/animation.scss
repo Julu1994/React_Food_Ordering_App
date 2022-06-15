@@ -1,28 +1,18 @@
-@mixin pop-up {
-    animation-name: pop-effect;
-    animation-duration: 2s;
-
-
+@mixin btn-anim ($borderRadious) {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: $borderRadious;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.6s;
+        background-color: $color2;
 }
 
-@keyframes pop-effect {
-    0% {
-        transform: scale(1);
-    }
-
-    10% {
-        transform: scale(0.9);
-    }
-
-    30% {
-        transform: scale(1.1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-} 
+@mixin btn-anim-hover {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+}

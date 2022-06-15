@@ -19,10 +19,19 @@
         margin-left: .3rem;
     }
 }
-
 .button:hover,
-.button:active {
-    @include pop-up;
+.button:active{
+    transform: translateY(-1px)
+}
+
+.button::after{
+    @include btn-anim(25px);
+
+}
+
+.button:hover::after{
+    @include btn-anim-hover;
+
 }
 
 

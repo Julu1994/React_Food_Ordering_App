@@ -14,6 +14,7 @@ $color3 : rgba(17, 24, 26, 0.838);
         }
     } 
 @mixin clickable-component ($bg, $cl){
+        cursor: pointer;
         margin:0 0 5rem 1rem;
         text-decoration: none;
         color: $cl;

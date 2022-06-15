@@ -86,6 +86,7 @@
     }
 
     &-link{
+        width: 20%;
         @include clickable-component(none, $color2);
         
     }
