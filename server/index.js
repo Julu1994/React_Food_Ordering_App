@@ -12,9 +12,8 @@ app.use(
     })
 );
 
-app.listen(5000, () => console.log("Server is up and running"));
-
 app.use("/admin", require("./Router/router"));
+app.listen(5000, () => console.log("Server is up and running"));
 
 mongoose.connect(process.env.MONGODB_SECRET_URL, (error) => {
     if (error) return console.error(error);
