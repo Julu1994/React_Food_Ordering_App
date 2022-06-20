@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./admin.scss"
-import TextField from '@mui/material/TextField';
-
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import AdminCard from "../Components/adminCard";
+import AdminText from "../Components/adminText";
 import axios from "axios";
 
 function Admin() {
@@ -18,28 +19,15 @@ setProducts(getProducts.data);
 
 console.log(products);
 
-    return <div className="form-main">
-        <div className="mu-textfield">
-            <TextField fullWidth label="Name" id="fullWidth" />
-
-        </div>
-        <div className="mu-textfield">
-            <TextField fullWidth label="Name" id="fullWidth" />
-
-        </div>
-        <div className="mu-textfield">
-            <TextField fullWidth label="Name" id="fullWidth" />
-
-        </div>
-        <div className="mu-textfield">
-            <TextField fullWidth label="Name" id="fullWidth" />
-
-        </div>
-        <div className="mu-textfield">
-            <TextField fullWidth label="Name" id="fullWidth" />
-
-        </div>
-    </div>;
+    return <>
+        
+    <Container>
+            <Grid container>
+                <AdminCard />
+            </Grid>
+        </Container>
+        <AdminText />
+        </>
 }
 
 export default Admin;
