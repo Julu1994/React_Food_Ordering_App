@@ -19,9 +19,27 @@ setProducts(getProducts.data);
 console.log(products);
 
     return <div className="form-main">
-        <TextField fullWidth label="fullWidth" id="fullWidth" />
+        <div className="mu-textfield">
+            <TextField fullWidth label="Name" id="fullWidth" />
 
-</div>;
+        </div>
+        <div className="mu-textfield">
+            <TextField fullWidth label="Name" id="fullWidth" />
+
+        </div>
+        <div className="mu-textfield">
+            <TextField fullWidth label="Name" id="fullWidth" />
+
+        </div>
+        <div className="mu-textfield">
+            <TextField fullWidth label="Name" id="fullWidth" />
+
+        </div>
+        <div className="mu-textfield">
+            <TextField fullWidth label="Name" id="fullWidth" />
+
+        </div>
+    </div>;
 }
 
 export default Admin;
