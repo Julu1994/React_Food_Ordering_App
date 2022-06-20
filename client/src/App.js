@@ -1,14 +1,12 @@
-import Routing from './routing';
-import './App.css';
+import Routing from "./routing";
+import "./App.css";
 
 function App() {
-  
-  return (
-    <div className="App">
-      <Routing/>
-  
-    </div>
-  );
+    return (
+        <div className="App">
+            <Routing />
+        </div>
+    );
 }
 
 export default App;
